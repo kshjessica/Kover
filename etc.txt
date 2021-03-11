@@ -1,0 +1,19 @@
+SELECT		
+	patient_id AS ID , 
+	name AS 이름 , 
+	chartNumber AS 차트No , 
+	gender AS 성별 , 
+	birth AS 생년월일 , 
+	medicine_id AS 약ID , 
+	medicineName AS 약명 , 
+	medicineIngredient AS 성분, 
+	doses AS 복용량 , 
+	dosesCountByDay AS 일복용횟수
+FROM
+	(SELECT cc.patient_id, cc.chartNumber, pp.medicine_id, pp.medicineName, pp.medicineIngredient, pp.doses, pp.dosesCountByDay
+	FROM charts AS cc
+	INNER JOIN `prescriptions` AS pp
+	ON cc.chartNumber = pp.chartNumber
+	WHERE cc.chartNumber > '2018090000' AND cc.chartNumber < '2018110000') AS c
+INNER JOIN `patients` AS p
+ON c.patient_id = p.id
