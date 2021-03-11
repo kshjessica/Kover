@@ -1,6 +1,7 @@
 # pirogramming_Kover
-## https://www.notion.so/Kover-667322a1daed47e492f558e659fe3488
-<
++ link: http://15.164.152.107:8000/
++ notion: https://www.notion.so/Kover-667322a1daed47e492f558e659fe3488
++ introduction
 ![슬라이드1](/introduction/슬라이드1.JPG)
 ![슬라이드2](/introduction/슬라이드2.JPG)
 ![슬라이드3](/introduction/슬라이드3.JPG)
